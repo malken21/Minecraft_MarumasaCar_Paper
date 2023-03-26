@@ -1,0 +1,4 @@
+name: track
+version: '${version}'
+main: marumasa.track.minecraft
+api-version: 1.19
