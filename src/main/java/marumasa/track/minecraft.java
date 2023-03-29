@@ -10,7 +10,7 @@ public final class minecraft extends JavaPlugin {
     public void onEnable() {
         Config config = new Config(this);
         final Server server = getServer();
-        server.getPluginManager().registerEvents(new events(config, this), this);
+        server.getPluginManager().registerEvents(new Events(config, this), this);
     }
 
     @Override
