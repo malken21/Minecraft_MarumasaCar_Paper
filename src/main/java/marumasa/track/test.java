@@ -20,8 +20,6 @@ import java.util.Map;
 
 public class test extends BukkitRunnable {
 
-    private float rotateY;
-
     private final ItemDisplay body;
 
     private final Interaction interaction_0;
@@ -49,7 +47,6 @@ public class test extends BukkitRunnable {
 
         final World world = horse.getWorld();
         final Location location = horse.getLocation();
-        rotateY = location.getYaw();
 
         body = (ItemDisplay) world.spawnEntity(location, EntityType.ITEM_DISPLAY);
         final ItemStack bodyItem = new ItemStack(Material.DISC_FRAGMENT_5);
@@ -96,10 +93,6 @@ public class test extends BukkitRunnable {
         bodyTeleport(location.clone());
 
         seat_0.setAge(-1024);
-        /*
-        Vector test = body.getLocation().getDirection();
-        test.rotateAroundY(location.getYaw());
-        body.setItemDisplayTransform(test);*/
 
         Map<Entity, Entity> passengerData;
 
