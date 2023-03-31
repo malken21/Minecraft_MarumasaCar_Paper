@@ -55,14 +55,16 @@ public class test extends BukkitRunnable {
         bodyItem.setItemMeta(bodyMeta);
         body.setItemStack(bodyItem);
 
+        body.setBrightness(new Display.Brightness(15, 15));
 
-        Transformation transform = body.getTransformation();
+
+                Transformation transform = body.getTransformation();
         Quaternionf quaternionf = transform.getLeftRotation();
 
         body.setTransformation(new Transformation(
                 transform.getTranslation().add(-0.1f, 1.1f, -1),
                 quaternionf,
-                transform.getScale().add(2.1f, 2.1f, 2.1f),
+                transform.getScale().add(1.5f, 2.1f, 2.1f),
                 transform.getRightRotation()
         ));
 
